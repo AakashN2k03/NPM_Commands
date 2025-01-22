@@ -125,49 +125,72 @@
 
 ## NVM Commands
 
-1. **Install nvm**
+1.    # NVM Installation Guide for Windows
+
+  **Install nvm Linux/macOS**
    ```bash
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
    ```
-   Installs Node Version Manager (NVM).
 
-2. **Check installed Node.js versions**
+**To install NVM on Windows, follow these steps:**
+
+###  **Install NVM for Windows**
+   - Visit the official NVM for Windows GitHub repository:
+     - [NVM for Windows Releases](https://github.com/coreybutler/nvm-windows/releases)
+   - Download the latest `.zip` or `.exe` installer for Windows (e.g., `nvm-setup.zip`).
+   - Follow the installation instructions provided in the repository.
+
+###  **Install Node.js versions with NVM**
+   - After installing NVM, use the following commands to install and manage Node.js versions:
+     - Install a specific Node.js version:
+       ```bash
+       nvm install 18.14.2
+       ```
+     - Switch to the installed Node.js version:
+       ```bash
+       nvm use 18.14.2
+       ```
+
+Now you can manage multiple versions of Node.js on your Windows system using NVM.
+
+
+3. **Check installed Node.js versions**
    ```bash
    nvm list
    ```
    Lists all installed Node.js versions.
 
-3. **Install a specific Node.js version**
+4. **Install a specific Node.js version**
    ```bash
    nvm install <version>
    ```
    Installs the specified Node.js version (e.g., `nvm install 18.14.2`).
 
-4. **Use a specific Node.js version**
+5. **Use a specific Node.js version**
    ```bash
    nvm use <version>
    ```
    Switches to the specified version (e.g., `nvm use 16`).
 
-5. **Set default Node.js version**
+6. **Set default Node.js version**
    ```bash
    nvm alias default <version>
    ```
    Sets the specified version as the default (e.g., `nvm alias default 18`).
 
-6. **Uninstall a Node.js version**
+7. **Uninstall a Node.js version**
    ```bash
    nvm uninstall <version>
    ```
    Removes the specified Node.js version.
 
-7. **Show current Node.js version**
+8. **Show current Node.js version**
    ```bash
    nvm current
    ```
    Displays the currently active Node.js version.
 
-8. **List available Node.js versions**
+9. **List available Node.js versions**
    ```bash
    nvm ls-remote
    ```
