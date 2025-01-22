@@ -1,108 +1,120 @@
-# NPM and NVM Commands Guide
+# NPM and NVM Commands Reference Guide
 
-A comprehensive reference guide for NPM (Node Package Manager) and NVM (Node Version Manager) commands with examples and expected outputs.
+A comprehensive guide for NPM (Node Package Manager) and NVM (Node Version Manager) commands with examples and outputs.
 
 ## Table of Contents
 - [NPM Commands](#npm-commands)
 - [NVM Commands](#nvm-commands)
-- [Official Documentation](#official-documentation)
 
 ## NPM Commands
 
 ### Package Management
 
 #### Installation
-1. Install all dependencies
+
+**Text Example**: Install all dependencies listed in your package.json file
 ```bash
 npm install
 ```
+**Output**:
 ```
 added 1270 packages, and audited 1271 packages in 30s
 found 0 vulnerabilities
 ```
 
-2. Install specific package
+**Text Example**: Install Express.js for your web application
 ```bash
 npm install express
 ```
+**Output**:
 ```
 + express@4.18.2
 added 57 packages, and audited 58 packages in 3s
 found 0 vulnerabilities
 ```
 
-3. Install package globally
+**Text Example**: Install Nodemon globally for automatic server restarting
 ```bash
 npm install -g nodemon
 ```
+**Output**:
 ```
 + nodemon@3.0.3
 added 118 packages in 4s
 ```
 
-4. Install development dependency
+**Text Example**: Install Jest for testing in development environment
 ```bash
 npm install --save-dev jest
 ```
+**Output**:
 ```
 + jest@29.7.0
 added 316 packages, and audited 317 packages in 12s
 found 0 vulnerabilities
 ```
 
-#### Uninstallation & Updates
-1. Uninstall package
+### Uninstallation & Updates
+
+**Text Example**: Remove Express.js from your project
 ```bash
 npm uninstall express
 ```
+**Output**:
 ```
 removed 57 packages, and audited 1214 packages in 3s
 found 0 vulnerabilities
 ```
 
-2. Update packages
+**Text Example**: Update all packages to their latest versions
 ```bash
 npm update
 ```
+**Output**:
 ```
 changed 10 packages, and audited 1271 packages in 5s
 found 0 vulnerabilities
 ```
 
-3. Check outdated packages
+**Text Example**: Check which packages need updating
 ```bash
 npm outdated
 ```
+**Output**:
 ```
 Package     Current  Wanted  Latest  Location
 express     4.17.1   4.17.3  4.18.2  project
 nodemon     2.0.15   2.0.22  3.0.3   project
 ```
 
-#### Package Information
-1. List package version
+### Package Information
+
+**Text Example**: Check the installed version of Express
 ```bash
 npm list express
 ```
+**Output**:
 ```
 project@1.0.0
 └── express@4.18.2
 ```
 
-2. View package details
+**Text Example**: View detailed information about Express package
 ```bash
 npm view express
 ```
+**Output**:
 ```
 express@4.18.2 | MIT | deps: 30 | versions: 262
 Fast, unopinionated, minimalist web framework for node.
 ...
 ```
 
-3. List global packages
+**Text Example**: List all globally installed packages
 ```bash
 npm list -g --depth=0
 ```
+**Output**:
 ```
 /usr/local/lib
 ├── npm@9.8.1
@@ -112,11 +124,11 @@ npm list -g --depth=0
 
 ### Project Management
 
-#### Initialization
-1. Create new project
+**Text Example**: Initialize a new Node.js project interactively
 ```bash
 npm init
 ```
+**Output**:
 ```
 package name: (project)
 version: (1.0.0)
@@ -125,10 +137,11 @@ entry point: (index.js)
 ...
 ```
 
-2. Create project with defaults
+**Text Example**: Initialize a project with default values
 ```bash
 npm init -y
 ```
+**Output**:
 ```
 Wrote to /path/to/project/package.json:
 {
@@ -138,27 +151,31 @@ Wrote to /path/to/project/package.json:
 }
 ```
 
-#### Version Management
+**Text Example**: Increment the minor version of your package
 ```bash
 npm version minor
 ```
+**Output**:
 ```
 v1.1.0
 ```
 
-#### Security
-1. Audit dependencies
+### Security
+
+**Text Example**: Check for known vulnerabilities in dependencies
 ```bash
 npm audit
 ```
+**Output**:
 ```
 found 0 vulnerabilities in 1271 packages
 ```
 
-2. Fix vulnerabilities
+**Text Example**: Automatically fix vulnerabilities
 ```bash
 npm audit fix
 ```
+**Output**:
 ```
 fixed 0 of 0 vulnerabilities in 1271 packages
 ```
@@ -166,62 +183,66 @@ fixed 0 of 0 vulnerabilities in 1271 packages
 ## NVM Commands
 
 ### Installation
-For macOS/Linux:
+**Text Example**: Install NVM on macOS/Linux
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
-For Windows, download the nvm-setup.zip from:
-https://github.com/coreybutler/nvm-windows/releases
-
 ### Version Management
-1. List installed versions
+
+**Text Example**: See all installed Node.js versions
 ```bash
 nvm list
 ```
+**Output**:
 ```
 ->     v18.19.0
        v16.20.2
        v14.21.3
 ```
 
-2. Install specific version
+**Text Example**: Install Node.js version 18.19.0
 ```bash
 nvm install 18.19.0
 ```
+**Output**:
 ```
 Downloading and installing node v18.19.0...
 Now using node v18.19.0 (npm v10.2.3)
 ```
 
-3. Switch version
+**Text Example**: Switch to Node.js version 16.20.2
 ```bash
 nvm use 16.20.2
 ```
+**Output**:
 ```
 Now using node v16.20.2 (npm v8.19.4)
 ```
 
-4. Set default version
+**Text Example**: Set Node.js 18.19.0 as the default version
 ```bash
 nvm alias default 18.19.0
 ```
+**Output**:
 ```
 default -> 18.19.0 (-> v18.19.0)
 ```
 
-5. Show current version
+**Text Example**: Check currently active Node.js version
 ```bash
 nvm current
 ```
+**Output**:
 ```
 v18.19.0
 ```
 
-6. List available versions
+**Text Example**: View available Node.js versions for installation
 ```bash
 nvm ls-remote
 ```
+**Output**:
 ```
 ...
        v18.19.0
@@ -230,74 +251,22 @@ nvm ls-remote
 ...
 ```
 
-## Official Documentation
-
-### NPM Documentation
-- Main documentation: https://docs.npmjs.com/
-- CLI Commands: https://docs.npmjs.com/cli/v10/commands
-- Package.json guide: https://docs.npmjs.com/cli/v10/configuring-npm/package-json
-- Dependency management: https://docs.npmjs.com/about-packages-and-modules
-
-### NVM Documentation
-- GitHub Repository: https://github.com/nvm-sh/nvm
-- Installation guide: https://github.com/nvm-sh/nvm#installing-and-updating
-- Usage documentation: https://github.com/nvm-sh/nvm#usage
-- Windows version: https://github.com/coreybutler/nvm-windows
-
 ## Common Issues and Troubleshooting
 
-### NPM
-1. Permission errors:
+**Text Example**: Clear NPM cache to resolve dependency issues
 ```bash
 npm cache clean --force
 ```
+**Output**:
 ```
 npm WARN using --force Recommended protections disabled.
 ```
 
-2. Module not found:
+**Text Example**: Reload NVM in current terminal
 ```bash
-npm install
-rm -rf node_modules
-npm cache clean --force
+source ~/.nvm/nvm.sh
 ```
-
-### NVM
-1. Command not found after installation:
-```bash
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+**Output**:
 ```
-
-2. Version switching issues:
-```bash
-nvm uninstall <version>
-nvm install <version>
+nvm > Successfully reloaded
 ```
-
-## Best Practices
-1. Always specify exact versions in `package.json`
-2. Use `--save-exact` when installing new packages
-3. Regularly update dependencies and check for vulnerabilities
-4. Keep Node.js versions consistent across development team using `.nvmrc` file
-
-## Project Setup Example
-```bash
-# Initialize new project
-npm init -y
-
-# Install production dependencies
-npm install express mongoose dotenv
-
-# Install development dependencies
-npm install --save-dev nodemon jest
-
-# Create .nvmrc file
-node -v > .nvmrc
-
-# Install specific Node.js version
-nvm install $(cat .nvmrc)
-```
-
----
-Last updated: January 2024
